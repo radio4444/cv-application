@@ -1,3 +1,4 @@
+// Clean all this code later
 // So the initial value for name, email and phone number, (in this example), empty
 // And the setValue going to be input field?
 
@@ -41,26 +42,22 @@ function GeneralInfo() {
         setSubmittedData(generalData);
     };
 
-
-
-
     return (
         <>
-
             <form onSubmit={handleSubmit}>
                 <div style={{backgroundColor: '#BAB4F2'}}>
                     <h1>This is the General Section</h1>
-                    <label> {/*Tomorrow make this code re-usable by creating props */}
+                    <label>
                         Name:
                         <input
-                            type="name"
+                            type="text"
                             name="userName"
                             value={generalData.userName}
                             onChange={handleChange}
                             placeholder="Enter your name: "
                         />
                     </label>
-                    <label> {/*Tomorrow make this code re-usable by creating props */}
+                    <label>
                         Email:
                         <input
                             type="email"
@@ -70,7 +67,7 @@ function GeneralInfo() {
                             placeholder="Enter your email: "
                         />
                     </label>
-                    <label> {/*Tomorrow make this code re-usable by creating props */}
+                    <label>
                         Phone:
                         <input
                             type="tel"
@@ -89,7 +86,7 @@ function GeneralInfo() {
             {/*We can create edit and submit for each form or whole CV*/}
             {submittedData && (
                 <div>
-                    <h2>Submitted General Info</h2>
+                    <h2>General Info</h2>
                     <p>Name: {submittedData.userName}</p>
                     <p>Email: {submittedData.userEmail}</p>
                     <p>Phone: {submittedData.userPhone}</p>
