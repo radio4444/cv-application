@@ -8,19 +8,20 @@
 // How would they do it? press submit
 
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault(); // search later what this mean
-    //     console.log('Form Date: ', generalData);
-    //     setGeneralData({
-    //         userName: '',
-    //         userEmail: '',
-    //         userPhone: '',
-    //     });
-    // };
+// const handleSubmit = (event) => {
+//     event.preventDefault(); // search later what this mean
+//     console.log('Form Date: ', generalData);
+//     setGeneralData({
+//         userName: '',
+//         userEmail: '',
+//         userPhone: '',
+//     });
+// };
 
 'use client';
 
 import {useState} from "react";
+import styles from '../style/GeneralInfo.module.css';
 
 function GeneralInfo() {
 
@@ -45,7 +46,7 @@ function GeneralInfo() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div style={{backgroundColor: '#BAB4F2'}}>
+                <div className={styles.container}>
                     <h1>This is the General Section</h1>
                     <label>
                         Name:
@@ -79,8 +80,8 @@ function GeneralInfo() {
                             maxLength={10}
                         />
                     </label>
+                    <button type="submit">Submit</button>
                 </div>
-                <button type="submit">Submit</button>
             </form>
 
             {/*We can create edit and submit for each form or whole CV*/}

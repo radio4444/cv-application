@@ -1,6 +1,7 @@
 'use client';
 
 import {useState} from "react";
+import style from '../style/EducationInfo.module.css'
 
 function EducationInfo() {
 
@@ -25,7 +26,7 @@ function EducationInfo() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div style={{backgroundColor: '#66B685'}}>
+                <div className={style.container}>
                     <h1>This is the Education Section</h1>
                     <label>
                         School Name:
@@ -57,8 +58,8 @@ function EducationInfo() {
                             placeholder="Enter your date of study: "
                         />
                     </label>
+                    <button type="submit">Submit</button>
                 </div>
-                <button type="submit">Submit</button>
             </form>
 
             {/*We can create edit and submit for each form or whole CV*/}

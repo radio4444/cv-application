@@ -1,6 +1,7 @@
 'use client';
 
 import {useState} from "react";
+import style from '../style/ExperienceInfo.module.css'
 
 function ExperienceInfo() {
 
@@ -25,7 +26,7 @@ function ExperienceInfo() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div style={{backgroundColor: '#CCDE7B'}}>
+                <div className={style.container}>
                     <h1>This is the Experience Section</h1>
                     <label>
                         Company Name:
@@ -74,11 +75,12 @@ function ExperienceInfo() {
                             value={experienceData.responsibilities}
                             onChange={handleChange}
                             placeholder="Enter your responsibilities: "
-                            style={{ width: '100%', height: '200px', resize: 'both' }}
+                            style={{width: '100%', height: '200px', resize: 'both'}}
                         />
                     </label>
+                    <button type="submit">Submit</button>
                 </div>
-                <button type="submit">Submit</button>
+
             </form>
 
             {/*We can create edit and submit for each form or whole CV*/}
