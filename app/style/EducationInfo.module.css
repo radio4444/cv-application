@@ -1,0 +1,12 @@
+.container {
+    background-color: #66B685;
+    border-radius: 5px;
+    flex-direction: row;
+    width: 604px;
+    height: 199px;
+    position: absolute;
+    top: 382px;
+    left: 55px;
+
+
+}
