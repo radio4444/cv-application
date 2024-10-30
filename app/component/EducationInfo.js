@@ -1,7 +1,6 @@
 'use client';
 
 import {useState} from "react";
-import style from '../style/EducationInfo.module.css'
 
 function EducationInfo() {
 
@@ -26,7 +25,7 @@ function EducationInfo() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className={style.container}>
+                <div className="containerEducation">
                     <h1>This is the Education Section</h1>
                     <label>
                         School Name:

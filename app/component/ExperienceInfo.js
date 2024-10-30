@@ -1,7 +1,6 @@
 'use client';
 
 import {useState} from "react";
-import style from '../style/ExperienceInfo.module.css'
 
 function ExperienceInfo() {
 
@@ -26,7 +25,7 @@ function ExperienceInfo() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className={style.container}>
+                <div className="containerExperience">
                     <h1>This is the Experience Section</h1>
                     <label>
                         Company Name:

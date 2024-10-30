@@ -1,27 +1,7 @@
-// Clean all this code later
-// So the initial value for name, email and phone number, (in this example), empty
-// And the setValue going to be input field?
-
-//I would like a button that can edit name, email and phone.
-// What exactly setValue would be? It would be equal to input. Then what?
-// Output the input, where? in the page itself?
-// How would they do it? press submit
-
-
-// const handleSubmit = (event) => {
-//     event.preventDefault(); // search later what this mean
-//     console.log('Form Date: ', generalData);
-//     setGeneralData({
-//         userName: '',
-//         userEmail: '',
-//         userPhone: '',
-//     });
-// };
-
 'use client';
 
 import {useState} from "react";
-import styles from '../style/GeneralInfo.module.css';
+import '../style/Components.css'
 
 function GeneralInfo() {
 
@@ -46,7 +26,7 @@ function GeneralInfo() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className={styles.container}>
+                <div className="containerGeneral">
                     <h1>This is the General Section</h1>
                     <label>
                         Name:
@@ -86,7 +66,7 @@ function GeneralInfo() {
 
             {/*We can create edit and submit for each form or whole CV*/}
             {submittedData && (
-                <div>
+                <div >
                     <h2>General Info</h2>
                     <p>Name: {submittedData.userName}</p>
                     <p>Email: {submittedData.userEmail}</p>
