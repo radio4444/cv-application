@@ -28,3 +28,30 @@
     top: 694px;
     left: 55px;
 }
+
+.containerSubmitDataGeneral{
+    background-color: #BAB4F2;
+    position: absolute;
+    top: 200px;
+    left: 789px;
+    width: 604px;
+    height: 120px;
+}
+
+.containerSubmitDataEducation{
+    background-color: #66B685;
+    position: absolute;
+    left: 789px;
+    top: 366px;
+    width: 604px;
+    height: 215px;
+}
+
+.containerSubmitDataExperience{
+    background-color: #CCDE7B;
+    position: absolute;
+    left: 789px;
+    top: 581px;
+    width: 604px;
+    height: 298px;
+}
