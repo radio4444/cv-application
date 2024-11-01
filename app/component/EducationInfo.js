@@ -63,7 +63,7 @@ function EducationInfo() {
 
             {/*We can create edit and submit for each form or whole CV*/}
             {submittedData && (
-                <div>
+                <div className="containerSubmitDataEducation">
                     <h2>Submitted Education Info</h2>
                     <p>School Name: {submittedData.schoolName}</p>
                     <p>Title of Study: {submittedData.titleOfStudy}</p>

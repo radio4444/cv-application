@@ -66,7 +66,7 @@ function GeneralInfo() {
 
             {/*We can create edit and submit for each form or whole CV*/}
             {submittedData && (
-                <div >
+                <div className="containerSubmitDataGeneral" >
                     <h2>General Info</h2>
                     <p>Name: {submittedData.userName}</p>
                     <p>Email: {submittedData.userEmail}</p>

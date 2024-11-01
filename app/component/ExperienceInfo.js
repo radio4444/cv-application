@@ -84,7 +84,7 @@ function ExperienceInfo() {
 
             {/*We can create edit and submit for each form or whole CV*/}
             {submittedData && (
-                <div>
+                <div className="containerSubmitDataExperience">
                     <h2>Submitted Experience Info</h2>
                     <p>Company Name: {submittedData.companyName}</p>
                     <p>Position Title: {submittedData.positionTitle}</p>
