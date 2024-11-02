@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 
-function EducationInfo() {
+function EducationInfo({onSubmit}) {
 
     const [educationData, setEducationData] = useState(
         {schoolName: '', titleOfStudy: '', dateOfStudy: ''});
@@ -15,17 +15,16 @@ function EducationInfo() {
         }));
     };
 
-    const [submittedData, setSubmittedData] = useState(null);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setSubmittedData(educationData);
+        onSubmit(educationData);
     };
 
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="containerEducation">
+
                     <h1>This is the Education Section</h1>
                     <label>
                         School Name:
@@ -58,18 +57,9 @@ function EducationInfo() {
                         />
                     </label>
                     <button type="submit">Submit</button>
-                </div>
+
             </form>
 
-            {/*We can create edit and submit for each form or whole CV*/}
-            {submittedData && (
-                <div className="containerSubmitDataEducation">
-                    <h2>Submitted Education Info</h2>
-                    <p>School Name: {submittedData.schoolName}</p>
-                    <p>Title of Study: {submittedData.titleOfStudy}</p>
-                    <p>Date of Study: {submittedData.dateOfStudy}</p>
-                </div>
-            )}
 
         </>
     );

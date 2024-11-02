@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 
-function ExperienceInfo() {
+function ExperienceInfo({onSubmit}) {
 
     const [experienceData, setExperienceData] = useState(
         {companyName: '', positionTitle: '', from: '', to: '', responsibilities: ''});
@@ -15,17 +15,16 @@ function ExperienceInfo() {
         }));
     };
 
-    const [submittedData, setSubmittedData] = useState(null);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setSubmittedData(experienceData);
+        onSubmit(experienceData);
     };
 
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="containerExperience">
+
                     <h1>This is the Experience Section</h1>
                     <label>
                         Company Name:
@@ -78,21 +77,10 @@ function ExperienceInfo() {
                         />
                     </label>
                     <button type="submit">Submit</button>
-                </div>
+
 
             </form>
 
-            {/*We can create edit and submit for each form or whole CV*/}
-            {submittedData && (
-                <div className="containerSubmitDataExperience">
-                    <h2>Submitted Experience Info</h2>
-                    <p>Company Name: {submittedData.companyName}</p>
-                    <p>Position Title: {submittedData.positionTitle}</p>
-                    <p>From: {submittedData.from}</p>
-                    <p>To: {submittedData.to}</p>
-                    <p>Responsibilities: {submittedData.responsibilities}</p>
-                </div>
-            )}
 
         </>
     );

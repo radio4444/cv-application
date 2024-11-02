@@ -1,9 +1,9 @@
 'use client';
 
 import {useState} from "react";
-import '../style/Components.css'
+import '../style/Components.css';
 
-function GeneralInfo() {
+function GeneralInfo({onSubmit}) {
 
     const [generalData, setGeneralData] = useState(
         {userName: '', userEmail: '', userPhone: ''});
@@ -16,17 +16,16 @@ function GeneralInfo() {
         }));
     };
 
-    const [submittedData, setSubmittedData] = useState(null);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setSubmittedData(generalData);
+        onSubmit(generalData);
     };
 
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="containerGeneral">
+
                     <h1>This is the General Section</h1>
                     <label>
                         Name:
@@ -61,18 +60,9 @@ function GeneralInfo() {
                         />
                     </label>
                     <button type="submit">Submit</button>
-                </div>
+
             </form>
 
-            {/*We can create edit and submit for each form or whole CV*/}
-            {submittedData && (
-                <div className="containerSubmitDataGeneral" >
-                    <h2>General Info</h2>
-                    <p>Name: {submittedData.userName}</p>
-                    <p>Email: {submittedData.userEmail}</p>
-                    <p>Phone: {submittedData.userPhone}</p>
-                </div>
-            )}
 
         </>
     );

@@ -1,64 +1,74 @@
+/* Parent container to hold both components */
+.containerFlex {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space out the components */
+    width: 100%; /* Full width */
+    max-width: 2000px; /* Limit max width */
+    margin: 0 auto; /* Center on the page */
+}
+
+/* Styles for the first component */
+.containerThreeComponents {
+    background-color: #808080;
+    width: 850px; /* Set width as needed */
+    height: auto; /* Adjust height based on content */
+    position: relative; /* Relative positioning */
+    padding: 20px; /* Add padding if needed */
+    border-radius: 5px; /* Optional border radius */
+}
+
+/* Styles for the second component */
+.containerThreeComponentsSubmission {
+    background-color: lightblue;
+    width: 850px; /* Set width as needed */
+    height: auto; /* Adjust height based on content */
+    position: relative; /* Relative positioning */
+    padding: 20px; /* Add padding if needed */
+    border-radius: 5px; /* Optional border radius */
+}
+
+/* Inner components with consistent layout */
+.containerGeneral,
+.containerEducation,
+.containerExperience,
+.containerSubmitDataGeneral,
+.containerSubmitDataEducation,
+.containerSubmitDataExperience {
+    border-radius: 5px;
+    width: 604px; /* Consistent width */
+    margin-bottom: 15px; /* Space between sections */
+}
+
+/* Individual component styles */
 .containerGeneral {
     background-color: #BAB4F2;
-    border-radius: 5px;
-    flex-direction: row;
-    width: 604px;
     height: 199px;
-    position: absolute;
-    top: 82px;
-    left: 42px;
 }
+
 .containerEducation {
     background-color: #66B685;
-    border-radius: 5px;
-    flex-direction: row;
-    width: 604px;
     height: 199px;
-    position: absolute;
-    top: 382px;
-    left: 55px;
 }
+
 .containerExperience {
     background-color: #CCDE7B;
-    border-radius: 5px;
-    flex-direction: row;
-    width: 604px;
     height: 300px;
-    position: absolute;
-    top: 694px;
-    left: 55px;
 }
 
-.containerSubmitDataGeneral{
+.containerSubmitDataGeneral {
     background-color: #BAB4F2;
-    position: absolute;
-    top: 200px;
-    left: 789px;
-    width: 604px;
     height: 120px;
+    margin-left: 150px; /* Adjust margin as needed */
 }
 
-.containerSubmitDataEducation{
+.containerSubmitDataEducation {
     background-color: #66B685;
-    position: absolute;
-    left: 789px;
-    top: 366px;
-    width: 604px;
     height: 215px;
+    margin-left: 150px; /* Adjust margin as needed */
 }
 
-.containerSubmitDataExperience{
+.containerSubmitDataExperience {
     background-color: #CCDE7B;
-    position: absolute;
-    left: 789px;
-    top: 581px;
-    width: 604px;
     height: 298px;
-}
-
-
-.containerThreeComponents{
-    background-color: rgba(138, 138, 138, 0.99);
-    width: 850px;
-    height: 1000px;
+    margin-left: 150px; /* Adjust margin as needed */
 }
