@@ -9,7 +9,7 @@ import {useState} from "react";
 export default function Home() {
 
     const [submittedData, setSubmittedData] = useState({
-        generalData: {},
+        generalData: {userName: '', userEmail: '', userPhone: ''},
         educationData: {},
         experienceData: {}
     });
@@ -30,7 +30,7 @@ export default function Home() {
     const updateExperienceData = (data) => {
         setSubmittedData((prev) => ({
             ...prev,
-            ExperienceData: data
+            experienceData: data
         }));
     };
 
@@ -46,23 +46,23 @@ export default function Home() {
             <div className="containerThreeComponentsSubmission">
                 <div className="containerSubmitDataGeneral">
                     <h2>General Info</h2>
-                    <p>Name: {submittedData.userName}</p>
-                    <p>Email: {submittedData.userEmail}</p>
-                    <p>Phone: {submittedData.userPhone}</p>
+                    <p>Name: {submittedData.generalData.userName}</p>
+                    <p>Email: {submittedData.generalData.userEmail}</p>
+                    <p>Phone: {submittedData.generalData.userPhone}</p>
                 </div>
                 <div className="containerSubmitDataEducation">
                     <h2>Submitted Education Info</h2>
-                    <p>School Name: {submittedData.schoolName}</p>
-                    <p>Title of Study: {submittedData.titleOfStudy}</p>
-                    <p>Date of Study: {submittedData.dateOfStudy}</p>
+                    <p>School Name: {submittedData.educationData.schoolName}</p>
+                    <p>Title of Study: {submittedData.educationData.titleOfStudy}</p>
+                    <p>Date of Study: {submittedData.educationData.dateOfStudy}</p>
                 </div>
                 <div className="containerSubmitDataExperience">
                     <h2>Submitted Experience Info</h2>
-                    <p>Company Name: {submittedData.companyName}</p>
-                    <p>Position Title: {submittedData.positionTitle}</p>
-                    <p>From: {submittedData.from}</p>
-                    <p>To: {submittedData.to}</p>
-                    <p>Responsibilities: {submittedData.responsibilities}</p>
+                    <p>Company Name: {submittedData.experienceData.companyName}</p>
+                    <p>Position Title: {submittedData.experienceData.positionTitle}</p>
+                    <p>From: {submittedData.experienceData.from}</p>
+                    <p>To: {submittedData.experienceData.to}</p>
+                    <p>Responsibilities: {submittedData.experienceData.responsibilities}</p>
                 </div>
 
             </div>
