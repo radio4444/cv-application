@@ -9,22 +9,26 @@
 
 /* Styles for the first component */
 .containerThreeComponents {
-    background-color: #808080;
+    background-color: white;
     width: 850px; /* Set width as needed */
     height: auto; /* Adjust height based on content */
     position: relative; /* Relative positioning */
-    padding: 20px; /* Add padding if needed */
+    padding: 100px; /* Add padding if needed */
     border-radius: 5px; /* Optional border radius */
+    color: black;
 }
 
 /* Styles for the second component */
 .containerThreeComponentsSubmission {
-    background-color: lightblue;
-    width: 850px; /* Set width as needed */
-    height: auto; /* Adjust height based on content */
-    position: relative; /* Relative positioning */
-    padding: 20px; /* Add padding if needed */
-    border-radius: 5px; /* Optional border radius */
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 0 auto; /* Center the letter on the page */
+    padding: 20mm; /* Padding around the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    background-color: white; /* Background color */
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    color: black;
 }
 
 /* Inner components with consistent layout */
@@ -56,19 +60,16 @@
 }
 
 .containerSubmitDataGeneral {
-    background-color: #BAB4F2;
     height: 120px;
     margin-left: 150px; /* Adjust margin as needed */
 }
 
 .containerSubmitDataEducation {
-    background-color: #66B685;
     height: 215px;
     margin-left: 150px; /* Adjust margin as needed */
 }
 
 .containerSubmitDataExperience {
-    background-color: #CCDE7B;
     height: 298px;
     margin-left: 150px; /* Adjust margin as needed */
 }
