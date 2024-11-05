@@ -66,10 +66,13 @@
 
 .containerSubmitDataEducation {
     height: 215px;
-    margin-left: 150px; /* Adjust margin as needed */
 }
 
 .containerSubmitDataExperience {
     height: 298px;
-    margin-left: 150px; /* Adjust margin as needed */
+
+}
+h2 {
+    border-bottom: 2px solid black; /* Adjust thickness and color */
+    padding-bottom: 5px; /* Adds space between text and underline */
 }
