@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV Application
 
-## Getting Started
+This project is a web-based CV application built using React. It allows users to fill out and preview a CV with general information, education details, and work experience. The app uses modular CSS for styling and is structured to be responsive and easy to modify.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Components](#components)
+- [Styles](#styles)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/cv-application.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd cv-application
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Project Structure
+
+```
+cv-application/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── GeneralInfo.js
+│   │   ├── EducationInfo.js
+│   │   ├── ExperienceInfo.js
+│   │   └── ...
+│   ├── styles/
+│   │   ├── Components.css
+│   │   └── ...
+│   └── pages/
+│       └── index.js
+├── package.json
+├── README.md
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **`components/`**: Contains individual components like `GeneralInfo`, `EducationInfo`, and `ExperienceInfo`, which are modularized for ease of use.
+- **`styles/`**: Holds the main CSS file `Components.css`, which applies consistent styling across all components.
+- **`pages/`**: Entry point for rendering components in the main app layout.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### GeneralInfo
+This component renders a form for entering general user information, such as name, email, and phone. Submissions are displayed to the right.
 
-## Learn More
+### EducationInfo
+The `EducationInfo` component collects details about the user's educational background. It uses a similar form layout as `GeneralInfo`.
 
-To learn more about Next.js, take a look at the following resources:
+### ExperienceInfo
+This component allows users to enter work experience details, including company name, position title, date range, and responsibilities.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Styles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The main stylesheet (`Components.css`) manages the layout and styling of each component to ensure a consistent look and feel. Styles are organized for each component:
 
-## Deploy on Vercel
+- **Container Styles**: Manages layout and responsiveness.
+- **Form Section Styling**: Provides consistent spacing, padding, and color schemes.
+- **Header Styling**: Enhances readability with headers that have underlines and adjustable spacing.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
